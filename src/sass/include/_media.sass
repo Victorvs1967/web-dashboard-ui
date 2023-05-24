@@ -1,0 +1,41 @@
+@use './base'
+@import ../include/vars
+
+@media (max-width: $breakpoint1450)
+  .container
+    max-width: 1200px
+
+@media (max-width: $breakpoint1200)
+  .container
+    max-width: 1160px
+
+  .header
+    &-content
+      justify-content: space-between
+      & > a
+        display: inline-flex
+    &-navigation
+      display: none
+
+@media (max-width: $breakpoint992)
+  .container
+    max-width: 970px
+
+  .horizontal-tabs
+    scrollbar-width: none
+    position: relative
+    &::-webkit-scrollbar
+      display: none
+
+@media (max-width: $breakpoint768)
+  .container
+    max-width: 768px
+
+  .main
+    &-header
+      h1
+        margin-bottom: 1rem
+
+@media (max-width: $breakpoint480)
+  .container
+    max-width: none
