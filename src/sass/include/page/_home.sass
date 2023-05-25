@@ -11,47 +11,46 @@
       font-size: 2.75rem
       font-weight: 600
       line-height: 1.25
-
-.search
-  max-width: 34rem
-  width: 100%
-  position: relative
-  display: flex
-  align-items: center
-  input
-    font: inherit
-    color: inherit
-    width: 100%
-    height: 4rem
-    padding: 0 1em 0 3.6rem
-    display: inline-flex
-    justify-content: center
-    align-items: center
-    border: 2px solid $colorBorderPrimary
-    border-radius: .8rem
-    font-size: 1.5rem
-    line-height: 1
-    color: $colorTextAction
-    transition: .3s ease
-    &::placeholder
-      color: $colorTextAction
-    &:hover,
-    &:focus
-      border-color: $colorAccentPrimary
-  button
-    height: 4rem
-    padding: 0
-    display: inline-flex
-    justify-content: center
-    align-items: center
-    border: 0
-    background-color: transparent
-    position: absolute
-    left: 1.2rem
-    top: 50%
-    transform: translateY(-50%)
-    font-size: 1.25em
-    color: $colorTextAction
+    .search
+      max-width: 34rem
+      width: 100%
+      position: relative
+      display: flex
+      align-items: center
+      input
+        font: inherit
+        color: inherit
+        width: 100%
+        height: 4rem
+        padding: 0 1em 0 4rem
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        border: 2px solid $colorBorderPrimary
+        border-radius: .8rem
+        font-size: 1.6rem
+        line-height: 1
+        color: $colorTextAction
+        transition: .3s ease
+        &::placeholder
+          color: $colorTextAction
+        &:hover,
+        &:focus
+          border-color: $colorAccentPrimary
+      button
+        height: 4rem
+        padding: 0
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        border: 0
+        background-color: transparent
+        position: absolute
+        left: 1.2rem
+        top: 50%
+        transform: translateY(-50%)
+        font-size: 1.25em
+        color: $colorTextAction
 
 .horizontal-tabs
   margin-top: 2rem
@@ -67,7 +66,7 @@
     color: inherit
     font-weight: 500
     border-bottom: 3px solid transparent
-    transform: .3s ease
+    transition: .3s ease
     &:hover,
     &:focus,
     &.active
@@ -214,7 +213,7 @@
     clip-path: inset(50%)
     overflow: hidden
     position: absolute
-    white-space: 1px
+    white-space: nowrap
     &:checked + span
       background-color: $colorAccentPrimary
       &::before

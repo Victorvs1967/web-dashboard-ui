@@ -1,4 +1,4 @@
-include ./_mixins
+include ./_vars
 
 main.main
   .container
@@ -7,7 +7,7 @@ main.main
       .search
         input(type="text", placeholder="Search")
         button(type="submit")
-          i.ph-bold.ph-magnifying-glass
+          i.ph-magnifying-glass-bold
     nav.horizontal-tabs
       a(href="#!") My details
       a(href="#!") Profile
@@ -25,10 +25,10 @@ main.main
         p Supercharge your workflow and connect the tool you use every day.
       .content-header-actions
         a.button(href="#!")
-          i.ph-bold.ph-faders
+          i.ph-faders-bold
           span Filter
         a.button(href="#!")
-          i.ph-bold.ph-plus
+          i.ph-plus-bold
           span Request integration
     .content
       .content-panel
@@ -41,159 +41,17 @@ main.main
           a(href="#!") Marketplace
       .content-main
         .card-grid
-          article.card
-            .card-header
-              div
-                span
-                  img(src="https://assets.codepen.io/285131/zeplin.svg", alt="zeplin")
-                h3 Zeplin
-              label.toggle
-                input(type="checkbox" checked)
-                span
-            .card-body
-              p Collaboration between designers and developers.
-            .card-footer
-              a(href="#!") View integration
-          article.card
-            .card-header
-              div
-                span
-                  img(src="https://assets.codepen.io/285131/github.svg", alt="github")
-                h3 GitHub
-              label.toggle
-                input(type="checkbox" checked)
-                span
-            .card-body
-              p Link pull request and automate workflow.
-            .card-footer
-              a(href="#!") View integration
-          article.card
-            .card-header
-              div
-                span
-                  img(src="https://assets.codepen.io/285131/figma.svg", alt="figma")
-                h3 Figma
-              label.toggle
-                input(type="checkbox" checked)
-                span
-            .card-body
-              p Embded file preview in projects.
-            .card-footer
-              a(href="#!") View integration
-          article.card
-            .card-header
-              div
-                span
-                  img(src="https://assets.codepen.io/285131/zapier.svg", alt="zapier")
-                h3 Zapier
-              label.toggle
-                input(type="checkbox" checked)
-                span
-            .card-body
-              p Build custom automations and integrations with apps.
-            .card-footer
-              a(href="#!") View integration
-          article.card
-            .card-header
-              div
-                span
-                  img(src="https://assets.codepen.io/285131/notion.svg", alt="notion")
-                h3 Notion
-              label.toggle
-                input(type="checkbox" checked)
-                span
-            .card-body
-              p Embed notion pages and notes in projects.
-            .card-footer
-              a(href="#!") View integration
-          article.card
-            .card-header
-              div
-                span
-                  img(src="https://assets.codepen.io/285131/slack.svg", alt="slack")
-                h3 Slack
-              label.toggle
-                input(type="checkbox" checked)
-                span
-            .card-body
-              p Send notification to channels and create projects.
-            .card-footer
-              a(href="#!") View integration
-          article.card
-            .card-header
-              div
-                span
-                  img(src="https://assets.codepen.io/285131/zendesk.svg", alt="zendesk")
-                h3 Zendesk
-              label.toggle
-                input(type="checkbox" checked)
-                span
-            .card-body
-              p Link and automate Zendesk tickets.
-            .card-footer
-              a(href="#!") View integration
-          article.card
-            .card-header
-              div
-                span
-                  img(src="https://assets.codepen.io/285131/jira.svg", alt="jira")
-                h3 Jira
-              label.toggle
-                input(type="checkbox" checked)
-                span
-            .card-body
-              p Plan, track, and release great software.
-            .card-footer
-              a(href="#!") View integration
-          article.card
-            .card-header
-              div
-                span
-                  img(src="https://assets.codepen.io/285131/dropbox.svg", alt="dropbox")
-                h3 Dropbox
-              label.toggle
-                input(type="checkbox" checked)
-                span
-            .card-body
-              p Everything you need for work, all in one place.
-            .card-footer
-              a(href="#!") View integration
-          article.card
-            .card-header
-              div
-                span
-                  img(src="https://assets.codepen.io/285131/google-chrome.svg", alt="google-chrome")
-                h3 Google-chrome
-              label.toggle
-                input(type="checkbox" checked)
-                span
-            .card-body
-              p Link your Google account to share bookmarks across your entire team.
-            .card-footer
-              a(href="#!") View integration
-          article.card
-            .card-header
-              div
-                span
-                  img(src="https://assets.codepen.io/285131/discord.svg", alt="discord")
-                h3 Discord
-              label.toggle
-                input(type="checkbox" checked)
-                span
-            .card-body
-              p Keep in touch with your customers without leaving the app.
-            .card-footer
-              a(href="#!") View integration
-          article.card
-            .card-header
-              div
-                span
-                  img(src="https://assets.codepen.io/285131/google-drive.svg", alt="google-drive")
-                h3 Google-drive
-              label.toggle
-                input(type="checkbox" checked)
-                span
-            .card-body
-              p Link your Google account to share files across your entire team.
-            .card-footer
-              a(href="#!") View integration
+          each card in cards
+            article.card
+              .card-header
+                div
+                  span
+                    img(src= card.icon, alt= card.label)
+                  h3= card.label
+                label.toggle
+                  input(type="checkbox" checked)
+                  span
+              .card-body
+                p= card.desc
+              .card-footer
+                a(href= card.link) View integration
